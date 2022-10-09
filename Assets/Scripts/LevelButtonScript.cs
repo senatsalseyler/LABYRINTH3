@@ -3,22 +3,23 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+
 public class LevelButtonScript : MonoBehaviour
 {
-    static int level = 0;
-    private int currentLevel = 0;
+    public int level;
+
     public TMP_Text levelText;
+
     // Start is called before the first frame update
     void Start()
     {
-        currentLevel = level;
-        level++;
-        levelText.text = currentLevel.ToString();
+        levelText.text = level.ToString();
     }
 
     // Update is called once per frame
-    void Update()
+    public void LoadLevel()
     {
-        
+        SceneManager.LoadScene("lvl" + level.ToString());
     }
 }

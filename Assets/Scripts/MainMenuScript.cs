@@ -6,6 +6,10 @@ using UnityEngine.UI;
 
 public class MainMenuScript : MonoBehaviour
 {
+    void Start()
+    {
+        GoToMainMenu();
+    }
     private void ToggleMenu(string menuName)
     {
         foreach (Transform child in transform)
@@ -19,7 +23,7 @@ public class MainMenuScript : MonoBehaviour
 
     public void GoToLevelSelect()
     {
-        ToggleMenu("LevelSelect");
+        ToggleMenu("LevelMenu");
     }
     public void GoToMainMenu()
     {
