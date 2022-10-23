@@ -12,6 +12,7 @@ namespace Labyrinth3.Gameplay
             evt.pickup = gameObject;
             evt.value = timeAddition;
             EventManager.Broadcast(evt);
+            Destroy(gameObject);
         }
     }
 }

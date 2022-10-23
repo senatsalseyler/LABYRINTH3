@@ -11,11 +11,11 @@ namespace Labyrinth3.Gameplay
         {
             CharacterMovement player = collision.GetComponent<CharacterMovement>();
             player.speed = speedUpValue;
-            Destroy(collision.gameObject);
             TimePowerupPickupEvent evt = Events.TimePowerupPickupEvent;
             evt.pickup = gameObject;
             evt.value = speedUpValue;
             EventManager.Broadcast(evt);
+            Destroy(gameObject);
         }
     }
 }
