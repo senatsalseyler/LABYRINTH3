@@ -13,11 +13,12 @@ namespace Labyrinth3.UI
         public KeyGroupScript keyGroup;
         public PowerUpGroup powerUpGroup;
         public PauseMenu pauseMenu;
-        
+
         public void OnMainMenuPressed()
         {
             SceneManager.LoadScene("MainMenu");
         }
+
         private void OnKeyPickup(KeyPickupEvent e)
         {
             keyGroup.AddKey();
@@ -37,21 +38,27 @@ namespace Labyrinth3.UI
         {
             powerUpGroup.AddPowerUpJump();
         }
-        
+
         public void OnPauseMenuButtonPressed()
         {
             pauseMenu.ShowPauseMenu();
-        } 
-        
+        }
+
         public void OnReturnToGameButtonPressed()
         {
             pauseMenu.HidePauseMenu();
+        }
+
+        public void OnRestartButtonClicked()
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         }
 
 
         // Start is called before the first frame update
         void Start()
         {
+            Screen.orientation = ScreenOrientation.LandscapeRight;
             EventManager.AddListener<KeyPickupEvent>(OnKeyPickup);
             EventManager.AddListener<SpeedUpPowerupPickupEvent>(OnSpeedUpPowerupPickup);
             EventManager.AddListener<TimePowerupPickupEvent>(OnTimePowerUpPickup);

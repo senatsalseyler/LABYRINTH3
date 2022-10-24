@@ -473,12 +473,12 @@ RectTransform:
   m_Children:
   - {fileID: 1711937304}
   m_Father: {fileID: 1681675602}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: 1.3999939, y: 188.56}
-  m_SizeDelta: {x: 1463.6792, y: 219.93005}
+  m_AnchorMin: {x: 0, y: 0.5}
+  m_AnchorMax: {x: 1, y: 0.5}
+  m_AnchoredPosition: {x: -0.22999573, y: -44.9}
+  m_SizeDelta: {x: 1300.5906, y: 175.52249}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &84865007
 MonoBehaviour:
@@ -3859,10 +3859,10 @@ RectTransform:
   m_Father: {fileID: 1681675602}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: 1.1000061, y: 287.17}
-  m_SizeDelta: {x: 1482.8301, y: 392.1009}
+  m_AnchorMin: {x: 0, y: 0.5}
+  m_AnchorMax: {x: 1, y: 0.5}
+  m_AnchoredPosition: {x: -0.4900055, y: 33.81}
+  m_SizeDelta: {x: 1317.9412, y: 312.92908}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &876167559
 MonoBehaviour:
@@ -5831,16 +5831,35 @@ MonoBehaviour:
   m_GameObject: {fileID: 1148345731}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4f231c4fb786f3946a6b90b886c48677, type: 3}
+  m_Script: {fileID: 11500000, guid: 01614664b831546d2ae94a42149d80ac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_HorizontalAxis: Horizontal
-  m_VerticalAxis: Vertical
-  m_SubmitButton: Submit
-  m_CancelButton: Cancel
-  m_InputActionsPerSecond: 10
-  m_RepeatDelay: 0.5
-  m_ForceModuleActive: 0
+  m_MoveRepeatDelay: 0.5
+  m_MoveRepeatRate: 0.1
+  m_ActionsAsset: {fileID: -944628639613478452, guid: ca9f5fa95ffab41fb9a615ab714db018,
+    type: 3}
+  m_PointAction: {fileID: 1054132383583890850, guid: ca9f5fa95ffab41fb9a615ab714db018,
+    type: 3}
+  m_MoveAction: {fileID: 3710738434707379630, guid: ca9f5fa95ffab41fb9a615ab714db018,
+    type: 3}
+  m_SubmitAction: {fileID: 2064916234097673511, guid: ca9f5fa95ffab41fb9a615ab714db018,
+    type: 3}
+  m_CancelAction: {fileID: -1967631576421560919, guid: ca9f5fa95ffab41fb9a615ab714db018,
+    type: 3}
+  m_LeftClickAction: {fileID: 8056856818456041789, guid: ca9f5fa95ffab41fb9a615ab714db018,
+    type: 3}
+  m_MiddleClickAction: {fileID: 3279352641294131588, guid: ca9f5fa95ffab41fb9a615ab714db018,
+    type: 3}
+  m_RightClickAction: {fileID: 3837173908680883260, guid: ca9f5fa95ffab41fb9a615ab714db018,
+    type: 3}
+  m_ScrollWheelAction: {fileID: 4502412055082496612, guid: ca9f5fa95ffab41fb9a615ab714db018,
+    type: 3}
+  m_TrackedDevicePositionAction: {fileID: 4754684134866288074, guid: ca9f5fa95ffab41fb9a615ab714db018,
+    type: 3}
+  m_TrackedDeviceOrientationAction: {fileID: 1025543830046995696, guid: ca9f5fa95ffab41fb9a615ab714db018,
+    type: 3}
+  m_DeselectOnBackgroundClick: 1
+  m_PointerBehavior: 0
 --- !u!114 &1148345733
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7384,12 +7403,12 @@ RectTransform:
   m_Children:
   - {fileID: 277129091}
   m_Father: {fileID: 1681675602}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: 1.3999939, y: 225.2}
-  m_SizeDelta: {x: 1466.1821, y: 209.2571}
+  m_AnchorMin: {x: 0, y: 0.5}
+  m_AnchorMax: {x: 1, y: 0.5}
+  m_AnchoredPosition: {x: -0.22999573, y: -15.649999}
+  m_SizeDelta: {x: 1302.8579, y: 167.00458}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1637276461
 MonoBehaviour:
@@ -7670,15 +7689,15 @@ RectTransform:
   m_LocalScale: {x: 7.0848713, y: 7.0848713, z: 7.0848713}
   m_Children:
   - {fileID: 876167558}
-  - {fileID: 84865006}
   - {fileID: 1637276460}
+  - {fileID: 84865006}
   m_Father: {fileID: 1550111087}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: -0.00048828125, y: 1703.9}
-  m_SizeDelta: {x: -1649.0001, y: 480.9992}
+  m_AnchorMin: {x: 0, y: 0.5}
+  m_AnchorMax: {x: 1, y: 0.5}
+  m_AnchoredPosition: {x: -0.00048828125, y: -0.099975586}
+  m_SizeDelta: {x: -1649.0001, y: 480.99927}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1001 &1700407713
 PrefabInstance:
