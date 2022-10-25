@@ -7,26 +7,20 @@ namespace Labyrinth3.UI
         public GameObject powerUpRunPrefab;
         public GameObject powerUpJumpPrefab;
         public GameObject powerUpTimePrefab;
-
-        private void AddGameObject(GameObject gameObj)
-        {
-            Instantiate(gameObj, transform);
-        }
-
+        
         public void AddPowerUpRun()
         {
-            AddGameObject(powerUpRunPrefab);
+            powerUpRunPrefab.gameObject.SetActive(true);
         }
 
         public void AddPowerUpJump()
         {
-            AddGameObject(powerUpJumpPrefab);
-
+            powerUpJumpPrefab.gameObject.SetActive(true);
         }
 
         public void AddPowerUpTime()
         {
-            AddGameObject(powerUpTimePrefab);
+            powerUpTimePrefab.gameObject.SetActive(true);
         }
     }
 }

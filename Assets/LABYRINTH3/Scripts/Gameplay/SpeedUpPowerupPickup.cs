@@ -11,7 +11,7 @@ namespace Labyrinth3.Gameplay
         {
             CharacterMovement player = collision.GetComponent<CharacterMovement>();
             player.speed = speedUpValue;
-            TimePowerupPickupEvent evt = Events.TimePowerupPickupEvent;
+            SpeedUpPowerupPickupEvent evt = Events.SpeedUpPowerupPickupEvent;
             evt.pickup = gameObject;
             evt.value = speedUpValue;
             EventManager.Broadcast(evt);
