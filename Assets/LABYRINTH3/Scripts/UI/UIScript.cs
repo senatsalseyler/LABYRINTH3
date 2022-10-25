@@ -42,10 +42,14 @@ namespace Labyrinth3.UI
         public void OnPauseMenuButtonPressed()
         {
             pauseMenu.ShowPauseMenu();
+            GameStopEvent gameStopEvent = new GameStopEvent();
+            EventManager.Broadcast(gameStopEvent);
         }
 
         public void OnReturnToGameButtonPressed()
         {
+            GameResumeEvent gameResumeEvent = new GameResumeEvent();
+            EventManager.Broadcast(gameResumeEvent);
             pauseMenu.HidePauseMenu();
         }
 

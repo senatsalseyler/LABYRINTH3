@@ -27,7 +27,14 @@ namespace Labyrinth3.Game
     public class TriedToEndWithoutCollectingKeysEvent : GameEvent
     {
     };
+    public class GameStopEvent : GameEvent
+    {
+    };
 
+    public class GameResumeEvent : GameEvent
+    {
+    };
+    
     public class KeyPickupEvent : GameEvent
     {
         public GameObject key;
