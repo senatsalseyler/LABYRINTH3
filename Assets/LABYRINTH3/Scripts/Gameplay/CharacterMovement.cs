@@ -24,13 +24,15 @@ namespace Labyrinth3.Gameplay
 
         private Vector3 move;
         private bool isGrounded = false;
-        private float xRotation = 0f;
-        private float yRotation = 0f;
+        private float xRotation;
+        private float yRotation;
 
         void Start()
         {
-
+            xRotation = camera.transform.rotation.eulerAngles.x;
+            yRotation = camera.transform.rotation.eulerAngles.y;
         }
+
         private void Awake()
         {
             playerControls = new PlayerControls();
@@ -55,7 +57,7 @@ namespace Labyrinth3.Gameplay
                 move.y = jumpHeight;
             }
         }
-        
+
         public void OnLook(InputAction.CallbackContext movementValue)
         {
         }
@@ -66,6 +68,7 @@ namespace Labyrinth3.Gameplay
 
         private void FixedUpdate()
         {
+            Debug.Log("FixedUpdate");
             Vector2 movementVector = playerControls.Player.Move.ReadValue<Vector2>();
             move.x = movementVector.x;
             move.z = movementVector.y;
@@ -78,10 +81,10 @@ namespace Labyrinth3.Gameplay
             yRotation += mouseX;
             xRotation -= mouseY;
             xRotation = Mathf.Clamp(xRotation, -90f, 90f);
-            
+
             camera.rotation = Quaternion.Euler(xRotation, yRotation, 0f);
             transform.rotation = Quaternion.Euler(0, yRotation, 0);
-            
+
             controller.Move(transform.TransformDirection(move) * speed * Time.deltaTime);
         }
     }
