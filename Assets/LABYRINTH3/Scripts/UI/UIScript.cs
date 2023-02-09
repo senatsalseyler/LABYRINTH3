@@ -9,7 +9,6 @@ namespace Labyrinth3.UI
 {
     public class UIScript : MonoBehaviour
     {
-        public Joystick joystick;
         public KeyGroupScript keyGroup;
         public PowerUpGroup powerUpGroup;
         public PauseMenu pauseMenu;
