@@ -1379,7 +1379,6 @@ GameObject:
   - component: {fileID: 6714011176862463969}
   - component: {fileID: 6714011176862463974}
   - component: {fileID: 6714011176862463975}
-  - component: {fileID: 6714011176862463968}
   - component: {fileID: 8877619201451385310}
   m_Layer: 5
   m_Name: Button
@@ -1488,19 +1487,6 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
---- !u!114 &6714011176862463968
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6714011176862463973}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ed4c666b6d31e2f4ca71565dfc086607, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  isJumpButtonPressed: 0
 --- !u!114 &8877619201451385310
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2670,12 +2656,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2fbef4bda69bc97428d3a7be16c9df05, type: 3}
---- !u!224 &6470107589385661300 stripped
-RectTransform:
-  m_CorrespondingSourceObject: {fileID: 2647089606121213870, guid: 2fbef4bda69bc97428d3a7be16c9df05,
-    type: 3}
-  m_PrefabInstance: {fileID: 9040458838421005530}
-  m_PrefabAsset: {fileID: 0}
 --- !u!114 &5207736772826260322 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 3833601679460370360, guid: 2fbef4bda69bc97428d3a7be16c9df05,
@@ -2688,3 +2668,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1519eb5e7287da14eb10ec87ebb32a29, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!224 &6470107589385661300 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 2647089606121213870, guid: 2fbef4bda69bc97428d3a7be16c9df05,
+    type: 3}
+  m_PrefabInstance: {fileID: 9040458838421005530}
+  m_PrefabAsset: {fileID: 0}
