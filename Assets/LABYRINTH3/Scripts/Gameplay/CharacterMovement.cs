@@ -6,7 +6,7 @@ using Cursor = UnityEngine.Cursor;
 
 namespace Labyrinth3.Gameplay
 {
-    public class CharacterMovement : MonoBehaviour, PlayerControls.IPlayerActions
+    public class CharacterMovement : MonoBehaviour
     {
         public CharacterController controller;
 
@@ -20,35 +20,26 @@ namespace Labyrinth3.Gameplay
         public float groundDistance = 0.4f;
         public LayerMask groundMask;
         Vector3 velocity;
-        private PlayerControls playerControls;
+        public PlayerInput playerInput;
+        private InputAction m_Move;
+        private InputAction m_Look;
 
         private Vector3 move;
         private bool isGrounded = false;
         private float xRotation;
         private float yRotation;
 
+        private void Awake()
+        {
+            m_Move = playerInput.currentActionMap.FindAction("Move");
+            m_Look = playerInput.currentActionMap.FindAction("Look");
+        }
+
         void Start()
         {
             xRotation = camera.transform.rotation.eulerAngles.x;
             yRotation = camera.transform.rotation.eulerAngles.y;
         }
-
-        private void Awake()
-        {
-            playerControls = new PlayerControls();
-            playerControls.Player.SetCallbacks(this);
-        }
-
-        private void OnEnable()
-        {
-            playerControls.Enable();
-        }
-
-        private void OnDisable()
-        {
-            playerControls.Disable();
-        }
-
         public void OnJump(InputAction.CallbackContext movementValue)
         {
             bool isJumpPressed = movementValue.ReadValue<float>() > 0;
@@ -58,24 +49,14 @@ namespace Labyrinth3.Gameplay
             }
         }
 
-        public void OnLook(InputAction.CallbackContext movementValue)
-        {
-        }
-
-        public void OnMove(InputAction.CallbackContext context)
-        {
-        }
-
         private void FixedUpdate()
         {
-            Debug.Log("FixedUpdate");
-            Vector2 movementVector = playerControls.Player.Move.ReadValue<Vector2>();
+            Vector2 movementVector = m_Move.ReadValue<Vector2>();
             move.x = movementVector.x;
             move.z = movementVector.y;
             isGrounded = Physics.CheckSphere(groundCheck.position, groundDistance, groundMask);
             move.y += gravity * Time.deltaTime;
-
-            Vector2 mouseVector = playerControls.Player.Look.ReadValue<Vector2>();
+            Vector2 mouseVector = m_Look.ReadValue<Vector2>();
             float mouseX = mouseVector.x * Time.deltaTime * mouseSensitivity;
             float mouseY = mouseVector.y * Time.deltaTime * mouseSensitivity;
             yRotation += mouseX;

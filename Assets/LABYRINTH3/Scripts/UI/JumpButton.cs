@@ -8,7 +8,7 @@ namespace Labyrinth3.UI
     public class JumpButton : MonoBehaviour, ISelectHandler, IDeselectHandler
 
     {
-        public bool isJumpButtonPressed = false;
+        private bool isJumpButtonPressed = false;
 
         public void OnSelect(BaseEventData eventData)
         {
