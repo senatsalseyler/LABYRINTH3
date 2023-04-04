@@ -42,7 +42,7 @@ namespace Labyrinth3.UI
             if (!isGameStopped)
             {
                 timeStart -= Time.deltaTime;
-                textBox.text = "Time Left: " + Mathf.Round(timeStart);
+                textBox.text = "" + Mathf.Round(timeStart);
 
                 if (timeStart <= 0)
                 {
