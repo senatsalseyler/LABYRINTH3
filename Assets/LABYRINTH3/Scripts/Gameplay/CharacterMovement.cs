@@ -29,6 +29,7 @@ namespace Labyrinth3.Gameplay
         private float xRotation;
         private float yRotation;
 
+        public AudioSource footsteps;
         private void Awake()
         {
             m_Move = playerInput.currentActionMap.FindAction("Move");
@@ -46,7 +47,14 @@ namespace Labyrinth3.Gameplay
             if (isJumpPressed && isGrounded)
             {
                 move.y = jumpHeight;
+                footsteps.enabled = true;
             }
+            else
+            {
+                footsteps.enabled = false;
+            }
+
+
         }
 
         private void FixedUpdate()
