@@ -396,7 +396,7 @@ PrefabInstance:
     - target: {fileID: 6714011175858097448, guid: 2b7e0260f3448664397b7fe241141ea9,
         type: 3}
       propertyPath: timeStart
-      value: 60
+      value: 75
       objectReference: {fileID: 0}
     - target: {fileID: 6714011176641435755, guid: 2b7e0260f3448664397b7fe241141ea9,
         type: 3}
@@ -468,8 +468,19 @@ PrefabInstance:
       propertyPath: m_text
       value: FLOOR 8
       objectReference: {fileID: 0}
+    - target: {fileID: 7168670872671590184, guid: 2b7e0260f3448664397b7fe241141ea9,
+        type: 3}
+      propertyPath: m_text
+      value: FLOOR 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2b7e0260f3448664397b7fe241141ea9, type: 3}
+--- !u!82 &354214950 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 1512095457982074586, guid: 2b7e0260f3448664397b7fe241141ea9,
+    type: 3}
+  m_PrefabInstance: {fileID: 354214949}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &359460250
 GameObject:
   m_ObjectHideFlags: 0
@@ -3453,6 +3464,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Key
       objectReference: {fileID: 0}
+    - target: {fileID: 8661801529046982445, guid: e6b2f0a594295c348919327fbe6801f5,
+        type: 3}
+      propertyPath: achievement
+      value: 
+      objectReference: {fileID: 354214950}
     - target: {fileID: 9204900122797540815, guid: e6b2f0a594295c348919327fbe6801f5,
         type: 3}
       propertyPath: m_RootOrder
