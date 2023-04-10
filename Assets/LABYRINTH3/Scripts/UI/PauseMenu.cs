@@ -1,10 +1,13 @@
 ﻿using UnityEngine;
+using UnityEngine.Audio;
 using UnityEngine.SceneManagement;
+using UnityEngine.UIElements;
 
 namespace Labyrinth3.UI
 {
     public class PauseMenu : MonoBehaviour
     {
+        public AudioMixer audioMixer;
         public void HidePauseMenu()
         {
             transform.gameObject.SetActive(false);
@@ -19,5 +22,11 @@ namespace Labyrinth3.UI
         {
             SceneManager.LoadScene("MainMenu");
         }
+
+        public void SetVolume(float volume)
+        {
+            audioMixer.SetFloat("volume", volume);
+        }
+        
     }
 }

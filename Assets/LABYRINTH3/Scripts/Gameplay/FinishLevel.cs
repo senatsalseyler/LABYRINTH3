@@ -9,6 +9,7 @@ namespace Labyrinth3.Gameplay
     {
         private int foundKeys = 0;
         public int keysNeedToTaken = 1;
+        public AudioSource warning;
 
         private void OnKeyPickup(KeyPickupEvent e)
         {
@@ -18,6 +19,8 @@ namespace Labyrinth3.Gameplay
         private void OnTriggerEnter(Collider other)
         {
             Debug.Log("FinishLevel OnTriggerEnter" + foundKeys + keysNeedToTaken);
+            warning.Play();
+
             if (foundKeys >= keysNeedToTaken)
             {
                 SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
